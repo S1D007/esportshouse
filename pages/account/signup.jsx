@@ -91,7 +91,7 @@ const funcvalidation = () => {
             .then((userCredential) => {
               // Signed in 
               const user = userCredential.user;
-              const url = `https://gamynt-backend.onrender.com/create-user?username=${user.displayName}&email=${user.email}`
+              const url = `https://esp-xecc.onrender.com/create-user?username=${user.displayName}&email=${user.email}`
               const data = axios.get(url).then((e)=>{
                 localStorage.setItem("signup",true)
                   localStorage.setItem("uid",e.data.uid)
@@ -117,7 +117,7 @@ const funcvalidation = () => {
         signInWithPopup(auth, provider)
           .then((result) => {
             const {user} = result
-            const url = `https://gamynt-backend.onrender.com/create-user?username=${user.displayName}&email=${user.email}`
+            const url = `https://esp-xecc.onrender.com/create-user?username=${user.displayName}&email=${user.email}`
             const data = axios.get(url).then((e)=>{
               localStorage.setItem("signup",true)
                 localStorage.setItem("uid",e.data.uid)

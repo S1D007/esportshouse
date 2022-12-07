@@ -1,9 +1,9 @@
 @import "../../../styles/helper.scss" ;
 @mixin gradtext {
-    background:linear-gradient(to bottom,rgb(255, 253, 253), rgb(107, 106, 106)) ;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0.1px rgba(224, 224, 224, 0.32);
+    // background:linear-gradient(to bottom,rgb(175, 88, 88), rgb(107, 106, 106)) ;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // -webkit-text-stroke: 0.1px rgba(224, 224, 224, 0.32);
   }
 
 .top_games_main{
@@ -29,7 +29,7 @@
         height: 5px;
     }
     &::-webkit-scrollbar-thumb{
-        background-color: rgb(83, 83, 83);
+        background-color: rgba(83, 83, 83, 0.413);
         border-radius: 11rem;
     }
     div{
@@ -37,14 +37,15 @@
         position: relative;
         transition: 0.30s ease;
         cursor: pointer;
+        border-radius: 40px;
         img{
             transition: 0.30s ease;
             padding: 0.4rem;
             border-radius: 1rem;
-            width: min(100px , 50%);
+            width: 200px;
             aspect-ratio: 1/1;
-            background-color: rgb(57, 57, 57);
-            width: min( 120px , 100%);
+            // background-color: rgba(69, 105, 78, 0.365);
+            // width: max( 200px , 120%);
             object-fit: contain;
         }
         p{

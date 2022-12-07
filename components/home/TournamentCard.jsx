@@ -9,12 +9,12 @@ const Post = ({title,slot,banner,prize,mode,id}) => {
   return (
     <div class={style.card}>
       <div className={style.card_img_holder}>
-        <img src={banner} alt="Blog image" />
+        <img src={banner} alt="image" />
       </div>
       <section className={style.blog_tittle}>
         <h3>{title}</h3>
         <Chip
-          avatar={<Avatar alt="Natacha" src="https://play-lh.googleusercontent.com/Iehzq0fyCTsAMX7_XEUEy8w8RRcgVNmX2UPDVDkqK8ezhl-4qOBOwm7tb7qe7XGYLqQ" />}
+          avatar={<Avatar alt="Natacha" src="logo.png" />}
           label="Free Fire"
           color='success'
           variant="outlined"
@@ -26,7 +26,7 @@ const Post = ({title,slot,banner,prize,mode,id}) => {
         <Chip color="warning" label="TTP" />
       </div>
       <div class={style.options}>
-        <div><div className={style.club_logo} ></div><span>legcy club Test</span> </div>
+        <div><h1>Organiser:</h1><h1>Esports House India</h1> </div>
         <p>schedule : 12 aug 12:30 am</p>
         <p>prize : <b>{prize}</b></p>
         <p>slot : <b>{slot}</b></p>

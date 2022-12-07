@@ -83,7 +83,7 @@ export default Register
 
 export const getServerSideProps = async (context) =>{
     const id = context.params.id;
-    const res = await fetch(`https://gamynt-backend.onrender.com/get-tournament?id=${id}`)
+    const res = await fetch(`https://esp-xecc.onrender.com/get-tournament?id=${id}`)
     const data = await res.json()
     console.log(data)
     return {

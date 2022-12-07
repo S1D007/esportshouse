@@ -18,14 +18,14 @@ const Navbar = () => {
             <SportsEsportsIcon />
             home
           </li>
-          <li>
+          {/* <li>
             <ForumIcon />
             talk
           </li>
           <li onClick={()=>{router.push("/clubs")}} className={`${path=="/clubs" && style.active}`}>
             <GroupsIcon />
             club
-          </li>
+          </li> */}
           <li onClick={()=>{router.push("/wallet")}} className={`${path=="/wallet" && style.active}`}>
             <MonetizationOnIcon />
             wallet

@@ -56,7 +56,7 @@ html{
 }
 body{
   color: var(--light-fonts);
-  background: #15151a;
+  background: #000;
   display: flex;
   flex-direction: column;
   background-repeat: no-repeat;

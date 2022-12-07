@@ -10,20 +10,20 @@ function Topgames(){
             </header>
             <section className={style.games_container}>
                 <div>
-                    <Image src="/logo_mini.png" alt="" width={70} height={70} />
-                    <p>team mongo</p>
+                    <Image src="/1.jpeg" alt="" width={70} height={70} />
+                    <p>Play now</p>
                 </div>
                 <div>
-                    <Image src="/logo_mini.png" alt="" width={70} height={70} />
-                    <p>team mongo</p>
+                    <Image src="/2.jpeg" alt="" width={70} height={70} />
+                    <p>Play now</p>
                 </div>
                 <div>
-                    <Image src="/logo_mini.png" alt="" width={70} height={70} />
-                    <p>team mongo</p>
+                    <Image src="/3.jpeg" alt="" width={70} height={70} />
+                    <p>Play now</p>
                 </div>
                 <div>
-                    <Image src="/logo_mini.png" alt="" width={100} height={100} />
-                    <p>team mongo</p>
+                    <Image src="/4.jpeg" alt="" width={100} height={100} />
+                    <p>Play now</p>
                 </div>
 
             </section>

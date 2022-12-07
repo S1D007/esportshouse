@@ -9,8 +9,8 @@ const Mobnav = () => {
       <img src="/logo.png" alt="img" />
         <section>
             <div className={style.notification}>
-            <NotificationsIcon/>
-            <p>12</p>
+            {/* <NotificationsIcon/> */}
+            {/* <p>12</p> */}
             </div>
         </section>
     </main>

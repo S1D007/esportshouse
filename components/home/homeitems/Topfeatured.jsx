@@ -11,15 +11,15 @@ function Topfeatured(){
             <section className={style.channerl_container}>
                 <div>
                     <Image src="/logo_mini.png" alt="" width={60} height={60} />
-                    <p>team mongo</p>
+                    <p>play now</p>
                 </div>
                 <div>
                     <Image src="/logo_mini.png" alt="" width={60} height={60} />
-                    <p>team mongo</p>
+                    <p>play now</p>
                 </div>
                 <div>
                     <Image src="/logo_mini.png" alt="" width={60} height={60} />
-                    <p>team mongo</p>
+                    <p>play now</p>
                 </div>
 
             </section>

@@ -29,7 +29,7 @@ export default function Home({tournaments}) {
       
     {/* top featured */}
 
-    <Topfeatured />
+    {/* <Topfeatured /> */}
     <Topgames />
       <h1 className="text-3xl mx-2" >Recomemded Tournaments</h1>
       <section className={style2.post_container}>
@@ -50,7 +50,7 @@ export default function Home({tournaments}) {
 }
 
 export async function getStaticProps(context) {
-  const res = await fetch('https://gamynt-backend.onrender.com/all-tournament')
+  const res = await fetch('https://esp-xecc.onrender.com/all-tournament')
   // console.log(res)
   const tournaments = await res.json()
 

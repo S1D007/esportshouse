@@ -16,7 +16,7 @@ const CreateTournament = () => {
     console.log(file)
     const handleCreate = (event) => {
         event.preventDefault()
-        const url = 'https://gamynt-backend.onrender.com/register-tournament';
+        const url = 'https://esp-xecc.onrender.com/register-tournament';
         const formData = new FormData();
         formData.append('banner', banner);
         formData.append('title', title)
@@ -90,7 +90,7 @@ const CreateTournament = () => {
                     </label>
                     <input onChange={(e) => {
                         setFile(e.target.files[0])
-                        const url = "https://gamynt-backend.onrender.com/upload"
+                        const url = "https://esp-xecc.onrender.com/upload"
                         const formData = new FormData()
                         formData.append('img', e.target.files[0]);
                         axios.post(url, formData).then((response) => {
