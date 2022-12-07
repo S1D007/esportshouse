@@ -8,19 +8,19 @@ import Mobnav from '../components/utils/Mobnav'
 import NextNProgress from 'nextjs-progressbar';
 function MyApp({ Component, pageProps }) {
   const route = useRouter()
-  // useEffect(() => {
-  //   const signup = localStorage.getItem("signup")
-  //   if (!signup) {
-  //     route.push("/account/signup")
-  //   }
-  // },[])
+  useEffect(() => {
+    const signup = localStorage.getItem("signup")
+    if (!signup) {
+      route.push("/account/signup")
+    }
+  },[])
   return (
     // <Provider store={store}>
       <main>
       <Mobnav/>
       <NextNProgress/>
         <Component {...pageProps} />
-        {/* <Navbar /> */}
+        <Navbar />
       </main>
     // </Provider>
   )

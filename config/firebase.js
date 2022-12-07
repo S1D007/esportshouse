@@ -8,13 +8,13 @@ import { getAuth } from "firebase/auth";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDqG44QSuCYooIe691xaXvbexr89ZAaT9k",
-  authDomain: "gamynt-app.firebaseapp.com",
-  projectId: "gamynt-app",
-  storageBucket: "gamynt-app.appspot.com",
-  messagingSenderId: "91948413141",
-  appId: "1:91948413141:web:f80b10c159d107f035325c",
-  measurementId: "G-KNLX4DJPV9"
+  apiKey: "AIzaSyCcud0ps2Ub0LxRiSE08T2RABJs6f-CnEI",
+  authDomain: "coinapp-f1304.firebaseapp.com",
+  databaseURL: "https://coinapp-f1304-default-rtdb.firebaseio.com",
+  projectId: "coinapp-f1304",
+  storageBucket: "coinapp-f1304.appspot.com",
+  messagingSenderId: "162668383923",
+  appId: "1:162668383923:web:ab04dcacd28b7507eb2ac6"
 };
 
 // Initialize Firebase

@@ -151,7 +151,7 @@ const funcvalidation = () => {
     <main className={style.main_auth}  data-aos="fade-up"
      data-aos-duration="1000">
         <header>
-            <img src={'/logo_mini.png'} alt="img" width={50} height={50}/>
+            <img src={'/logo.png'} alt="img" width={50} height={50}/>
             <p>Create a new Account</p>
         </header>
         <section className={style.login_with}>
@@ -198,7 +198,7 @@ const funcvalidation = () => {
             <button>Sign up</button>
         </form>
         <div className={style.change_auth_type}>
-            <p>Already have an account? <Link href="/account/login">Log in</Link></p>
+            {/* <p>Already have an account? <Link href="/account/login">Log in</Link></p> */}
         </div>
     </main>
     </main>

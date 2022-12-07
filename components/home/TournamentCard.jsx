@@ -4,7 +4,7 @@ import Image from "next/image"
 import {useRouter} from "next/router"
 import { Avatar, Chip } from '@mui/material'
 import ShareIcon from '@mui/icons-material/Share';
-const Post = ({title,slot,banner,prize,mode,id}) => {
+const Post = ({title,slot,banner,prize,mode,id,schd}) => {
   const router = useRouter()
   return (
     <div class={style.card}>
@@ -27,7 +27,7 @@ const Post = ({title,slot,banner,prize,mode,id}) => {
       </div>
       <div class={style.options}>
         <div><h1>Organiser:</h1><h1>Esports House India</h1> </div>
-        <p>schedule : 12 aug 12:30 am</p>
+        <p>schedule : {schd}</p>
         <p>prize : <b>{prize}</b></p>
         <p>slot : <b>{slot}</b></p>
         <p>mode : <b>{mode}</b></p>

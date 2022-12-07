@@ -3,7 +3,9 @@ import style from "./createtournament.module.scss"
 import FileUploadIcon from '@mui/icons-material/FileUpload';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import axios from "axios"
+import {useRouter} from "next/router"
 const CreateTournament = () => {
+    const route = useRouter()
     const [title, setTitle] = useState("")
     const [game, setGame] = useState("")
     const [mode, setMode] = useState("")
@@ -12,6 +14,7 @@ const CreateTournament = () => {
     const [prize, setPrize] = useState("")
     const [description, setDescription] = useState("")
     const [file, setFile] = useState(null)
+    const [time,setTime] = useState(null)
     const [banner, setBanner] = useState("")
     console.log(file)
     const handleCreate = (event) => {
@@ -23,12 +26,14 @@ const CreateTournament = () => {
         formData.append('game', game)
         formData.append('mode', mode)
         formData.append('slot', slot)
+        formData.append('schd', time)
         formData.append('EntryFees', fee)
         formData.append('description', description)
         formData.append('PrizePool', prize)
         console.log(formData)
         axios.post(url, formData).then((response) => {
             console.log(response.data);
+            route.push("/")
             // setBanner(response.data.result)
         });
 
@@ -53,6 +58,12 @@ const CreateTournament = () => {
                     <input value={game} onChange={(e) => {
                         setGame(e.target.value)
                     }} type="text" placeholder='Eg. Free Fire , Pubg ..' />
+                </section>
+                <section className={style.input_box}>
+                    <p>Date/Time<span>*</span> </p>
+                    <input value={time} onChange={(e) => {
+                        setTime(e.target.value)
+                    }} type="text" placeholder='25th of Aug 2022 [12:00 PM]' />
                 </section>
                 <section className={style.input_box}>
                     <p>Mode<span>*</span> </p>

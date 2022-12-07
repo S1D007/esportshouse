@@ -16,7 +16,7 @@ const Index = () => {
         <div className={style.ui_box_3}></div>
         </section>
 
-        <h1>gymnt wallet</h1>
+        <h1>Comming Soon</h1>
     </nav>
 
 <section className={style.balance}>
