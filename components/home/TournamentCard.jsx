@@ -37,7 +37,13 @@ const Post = ({title,slot,banner,prize,mode,id,schd,game}) => {
             router.push(`/tournaments/${id}`)
             // alert("hi")
            }}>register</button>
-          <ShareIcon />
+          <ShareIcon onClick={()=>{
+             navigator.clipboard.writeText(`https://esportshouse.vercel.app/tournaments/${id}`).then(() => {
+              // Alert the user that the action took place.
+              // Nobody likes hidden stuff being done under the hood!
+              alert("Copied to clipboard");
+          });
+          }} />
         </div>
       </div>
     </div>

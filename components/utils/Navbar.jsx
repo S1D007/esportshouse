@@ -31,7 +31,7 @@ const Navbar = () => {
             wallet
           </li>
           <li onClick={()=>{router.push("/account")}} className={`${path=="/account" && style.active}`}>
-            <img src="/logo.png" alt="img"  />
+            <img src="/logo.png" width={150} alt="img"  />
             profile
           </li>
         </section>

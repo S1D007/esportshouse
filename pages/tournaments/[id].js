@@ -45,7 +45,9 @@ const Register = ({data}) => {
             <div className={style.promo_info}
             >
                 <br/>
-                <strong className="text-3xl" >{data.title}</strong>
+                <strong style={{
+                    marginTop:"-50px"
+                }} className="text-3xl" >{data.title}</strong>
                 {/* <p></p> */}
             </div>
             <button style={{

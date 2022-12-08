@@ -17,11 +17,11 @@ const Index = () => {
     !users?<main className={style.main_profile_page}>
     <section className={style.profile_top_view}>
       <div className={style.image_container}>
-      <img src="/logo.png" alt="img" width={20} height={20}/>
+      <img src="/pic.jpeg" alt="img" width={40} height={50}/>
       </div>
       <div className={style.name_bio}>
       <h1>{name}</h1>
-      <p>Made with Irony</p>
+      <p>I Love Esports House</p>
       </div>
     </section>
     <section className={style.logout}>

@@ -10,6 +10,10 @@ function Topgames(){
             </header>
             <section className={style.games_container}>
                 <div>
+                    <Image src="/0.jpeg" alt="" width={70} height={70} />
+                    <p>Play now</p>
+                </div>
+                <div>
                     <Image src="/1.jpeg" alt="" width={70} height={70} />
                     <p>Play now</p>
                 </div>

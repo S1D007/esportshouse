@@ -155,48 +155,17 @@ const funcvalidation = () => {
             <p>Create a new Account</p>
         </header>
         <section className={style.login_with}>
-            <div onClick={handleGoogleSignup} >
-                <img src={"/google_icon.svg"} alt="img" width={30} height={30}></img>
+            <div style={{
+              diaplay:"flex",
+              flexDirection:"column"
+              // justifyConetnt:"center"
+            }} onClick={handleGoogleSignup} >
+                <img src={"/google_icon.svg"} alt="img" width={50} height={50}></img>
             </div>
         </section>
-        <div className={style.or}>
+        {/* <div className={style.or}>
             <hr />or <hr />
-        </div>
-
-        <form onSubmit={handlesubmit}>
-            <section>
-            <PersonIcon />
-            <input type="text" placeholder='enter your name' value={username}
-                onChange={(e) => { setusername(e.target.value)}}/>
-            </section>
-            <section>
-            <MailIcon />
-            <input type="text" placeholder='enter your email' value={email}
-                onChange={(e) => { setemail(e.target.value) }} />
-            </section>
-            {/* // password management  */}
-            <section className={style.pass_input}>
-            <LockIcon />
-            <input type={passtype} placeholder='password' value={password}
-                onChange={(e) => { setpassword(e.target.value) }} />
-
-                <div onClick={() => { { passtype === "password" ? setpasstype("text") : setpasstype("password") } }}>
-                {passtype === "password" ? <VisibilityIcon /> : <VisibilityOffIcon />}
-              </div>
-            </section>
-            <section className={style.pass_input}>
-            <LockIcon />
-            <input type={confirmpasstype} placeholder='confirm password' value={confirmpassword}
-                onChange={(e) => { setconfirmpassword(e.target.value) }} />
-
-                <div onClick={() => { { confirmpasstype === "password" ? setconfirmpasstype("text") : setconfirmpasstype("password") } }}>
-                {confirmpasstype === "password" ? <VisibilityIcon /> : <VisibilityOffIcon />}
-              </div>
-            </section>
-            {/* // password s  */}
-
-            <button>Sign up</button>
-        </form>
+        </div> */}
         <div className={style.change_auth_type}>
             {/* <p>Already have an account? <Link href="/account/login">Log in</Link></p> */}
         </div>

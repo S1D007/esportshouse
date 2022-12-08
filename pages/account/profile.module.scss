@@ -19,7 +19,8 @@
     align-items: center;
 }
 .image_container{
-    background-color: rgb(61, 61, 61);
+    background-color: #15151a;
+    // background-image: url("../../public/banner_tournament.png");
     width: 100%;
     display: flex;
     justify-content: center;
@@ -29,9 +30,9 @@
     margin-bottom: 4rem;
     border-radius: 1rem;
     img{
-        width: min(7rem , 50%);
+        width: min(7rem , 100%);
         aspect-ratio: 1/1;
-        object-fit: contain;
+        object-fit: cover;
         height: fit-content;
         position: absolute;
         top: 60%;

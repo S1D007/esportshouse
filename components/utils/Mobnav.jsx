@@ -11,6 +11,7 @@ const Mobnav = () => {
             <div className={style.notification}>
             {/* <NotificationsIcon/> */}
             {/* <p>12</p> */}
+            <h1>Esports House</h1>
             </div>
         </section>
     </main>
