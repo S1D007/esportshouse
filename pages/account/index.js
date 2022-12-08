@@ -3,9 +3,10 @@ import Image from "next/image"
 import LogoutIcon from '@mui/icons-material/Logout';
 import style from "./profile.module.scss"
 import GroupsIcon from '@mui/icons-material/Groups';
-// import { useState } from 'react';
+import { useRouter } from 'next/router';
 import User from "../../components/utils/Users"
 const Index = () => {
+  const route = useRouter()
   const [name,setName] = useState("")
   const [users,setUsers] = useState(false)
   useEffect(()=>{
@@ -26,6 +27,7 @@ const Index = () => {
     <section className={style.logout}>
       <button onClick={()=>{
           localStorage.clear()
+          route.push("/account/signup")
       }}> <p>Log out</p><LogoutIcon/></button>
     </section>
   </main>:<User/>
