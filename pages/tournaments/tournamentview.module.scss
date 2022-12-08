@@ -8,7 +8,7 @@
 .home_main {
     margin: auto;
     width: min(1100px, 100%);
-    height: calc(100vh - 3rem);
+    height: calc(90vh - 3rem);
     overflow-y: scroll;
 }
 .home_main::-webkit-scrollbar{
@@ -39,7 +39,7 @@
 }
 
 .info_container {
-    padding: 1rem;
+    padding: 0.4rem;
     border-radius: 0.5rem;
     background-color: rgba(0, 0, 0, 0.171);
     backdrop-filter: blur(5px);
@@ -64,18 +64,18 @@
 }
 .join_btn{
     padding: 0.3rem 1rem;
-    color: rgb(238, 238, 238);
+    color: rgb(0, 0, 0);
     font-weight: 500;
     letter-spacing: 1px;
-    background-color: rgb(167, 3, 31);
+    background-color: rgb(135, 232, 90);
     z-index: 2;
     transition: 1 ease;
-    cursor: grab;
+    // cursor: grab;
     &:hover{
         transition: 1 ease;
-        background-color: rgba(188, 16, 45, 0.797);
+        background-color: rgba(16, 188, 116, 0.797);
         backdrop-filter: blur(20px);
-        box-shadow: 0px 0px 20px rgb(198, 0, 33);
+        box-shadow: 0px 0px 20px rgb(0, 198, 92);
     }
 }
 .hoster_promo{

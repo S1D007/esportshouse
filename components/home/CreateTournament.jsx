@@ -41,8 +41,8 @@ const CreateTournament = () => {
     return (
         <main className={style.create_main}>
             <header className={style.header}>
-                <img src="/logo_mini.png" alt="img" />
-                <h1>My Club Name</h1>
+                <img src="/logo.png" alt="img" />
+                {/* <h1></h1> */}
                 <h2>Create Tournament</h2>
                 <h5>Enter Correct Details</h5>
             </header>
@@ -52,6 +52,24 @@ const CreateTournament = () => {
                     <input value={title} onChange={(e) => {
                         setTitle(e.target.value)
                     }} type="text" placeholder='Eg. Free Fire T3 Tournament' />
+                </section>
+                <section className={style.imageui_box}>
+                    <label htmlFor="imagebanner">
+                        {file !== null ? <>
+                            <h1>{file ? file.name : ""}<CheckCircleIcon color='success' /></h1>
+                        </> : <><FileUploadIcon />
+                            <p>Select a Banner file</p></>}
+                    </label>
+                    <input onChange={(e) => {
+                        setFile(e.target.files[0])
+                        const url = "https://esp-xecc.onrender.com/upload"
+                        const formData = new FormData()
+                        formData.append('img', e.target.files[0]);
+                        axios.post(url, formData).then((response) => {
+                            console.log(response.data);
+                            setBanner(response.data.result)
+                        });
+                    }} type="file" accept='image/*' id="imagebanner" />
                 </section>
                 <section className={style.input_box}>
                     <p>Game<span>*</span> </p>
@@ -92,24 +110,7 @@ const CreateTournament = () => {
                         setPrize(e.target.value)
                     }} type="text" placeholder='123' />
                 </section>
-                <section className={style.imageui_box}>
-                    <label htmlFor="imagebanner">
-                        {file !== null ? <>
-                            <h1>{file ? file.name : ""}<CheckCircleIcon color='success' /></h1>
-                        </> : <><FileUploadIcon />
-                            <p>Select a Banner file</p></>}
-                    </label>
-                    <input onChange={(e) => {
-                        setFile(e.target.files[0])
-                        const url = "https://esp-xecc.onrender.com/upload"
-                        const formData = new FormData()
-                        formData.append('img', e.target.files[0]);
-                        axios.post(url, formData).then((response) => {
-                            console.log(response.data);
-                            setBanner(response.data.result)
-                        });
-                    }} type="file" accept='image/*' id="imagebanner" />
-                </section>
+                
                 <section className={style.desc_box}>
                     <textarea value={description} onChange={(e) => {
                         setDescription(e.target.value)

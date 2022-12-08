@@ -16,7 +16,7 @@ const Index = () => {
     !users?<main className={style.main_profile_page}>
     <section className={style.profile_top_view}>
       <div className={style.image_container}>
-      <img src="/logo_mini.png" alt="img" width={20} height={20}/>
+      <img src="/logo.png" alt="img" width={20} height={20}/>
       </div>
       <div className={style.name_bio}>
       <h1>{name}</h1>
@@ -24,7 +24,9 @@ const Index = () => {
       </div>
     </section>
     <section className={style.logout}>
-      {/* <button> <p>Log out</p><LogoutIcon/></button> */}
+      <button onClick={()=>{
+          localStorage.clear()
+      }}> <p>Log out</p><LogoutIcon/></button>
     </section>
   </main>:<User/>
   )

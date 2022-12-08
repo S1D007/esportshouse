@@ -1,12 +1,22 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import Image from "next/image"
 import style from "./tournamentview.module.scss"
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import LanguageIcon from '@mui/icons-material/Language';
 import GroupIcon from '@mui/icons-material/Group';
+import axios from "axios"
 const Register = ({data}) => {
     const [det,setDet] = useState(false)
     console.log(data)
+    const [name,setName] = useState("")
+    const [done,setDone] = useState(false)
+    const [exist,setExist] = useState(false)
+    useEffect(()=>{
+       const x =  localStorage.getItem(data.id)
+       if(x){
+        setExist(true)
+       } 
+    },[])
   return (
     <main className={style.home_main}>
         <section className={style.home_section}>
@@ -32,16 +42,66 @@ const Register = ({data}) => {
             </div>
             {/* <button>join</button> */}
             </section>
-            <button onClick={()=>{
+            <div className={style.promo_info}
+            >
+                <br/>
+                <strong className="text-3xl" >{data.title}</strong>
+                {/* <p></p> */}
+            </div>
+            <button style={{
+                marginTop:"-40px"
+            }} disabled={done}  onClick={()=>{
                 setDet(true)
-            }} className={style.join_btn}>Join tournament</button>
+            }} className={style.join_btn}>{done || exist ?"Registered":"Join Tournament"}</button>
+            
+            </section>
+            <section>
             {
-                det?<div>
-                <div><h1>ID: {data.id_game}</h1></div>
-                <div><h1>Password: {data.password}</h1></div>
-            </div>:""
+                det?<span style={{
+                    display:"flex",
+                    justifyContent:"center",
+                    padding:"10px",
+                    // marginTop:"-120px",
+                    alignItems:"center"
+                }} >
+                    {
+                                    exist?"":<div>
+                                        <input value={name} onChange={(e)=>{setName(e.target.value)}} type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="In Game Name"/>
+                                    
+                                    <button style={{
+
+                                    }} onClick={()=>{
+                                        if(name === "" && name.langth < 3){
+                                            window.alert("enter name")
+                                        }else{
+                                            setDone(true)
+                                            const url = `https://esp-xecc.onrender.com/add-part?username=${name}&id=${data._id}`
+                                            axios.get(url).then(()=>{
+                                                alert("regestration Done")
+                                                localStorage.setItem(data.id,data.id)
+                                                setExist(true)
+                                            })
+                                           
+                                        }
+                                    }}>Register</button>
+                                    </div>
+                                }
+            </span>:""
             }
-        </section>
+            </section>
+            {
+                exist?<div style={{
+                    backgroundColor:"#15151a",
+                    padding:"20px",
+                    margin:"10px",
+                    fontSize:"20px",
+                    marginTop:"-150px",
+                    borderRadius:"10px"
+                }}>
+                    <h1>ID:{data.game_id}</h1>
+                    <h1>Password: {data.password}</h1>
+                </div>:""
+            }
 
 {/* info here  */}
         <main className={style.tournament_info}>
