@@ -93,7 +93,7 @@ const Register = ({data}) => {
                                             window.alert("enter name")
                                         }else{
                                             setDone(true)
-                                            const url = `https://esp-xecc.onrender.com/add-part?username=${name}&id=${data._id}&email={email}`
+                                            const url = `https://esp-xecc.onrender.com/add-part?username=${name}&id=${data._id}&email=${email}`
                                             axios.get(url).then(()=>{
                                                 alert("regestration Done")
                                                 localStorage.setItem(data.id,data.id)
