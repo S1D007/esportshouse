@@ -23,13 +23,11 @@ const Register = ({data}) => {
     },[])
   return (
     <main className={style.home_main}>
-        {/* <Head>
-            <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script>
-            <script data-cfasync="false" type="text/javascript" src="//buzzonclick.com/a/display.php?r=6521430"></script>
+        <Head>
     <script data-cfasync="false" type="text/javascript" data-adel="atag" src="//ashcdn.com/script/atg.js" czid="hjmsvgagon"></script>
     <script data-cfasync="false" type="text/javascript" src="//buzzonclick.com/a/display.php?r=6521458"></script>
     <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script>
-            </Head> */}
+            </Head> 
         <section className={style.home_section}>
             <div className={style.image_bg}>
         {/* <img src="/pubg.jpg" alt="img" loading='lazy' height={220} width={230} /> */}
