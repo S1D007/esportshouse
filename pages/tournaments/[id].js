@@ -21,8 +21,6 @@ const Register = ({data}) => {
   return (
     <main className={style.home_main}>
         <Head>
-            <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script>
-            <script data-cfasync="false" type="text/javascript" src="//buzzonclick.com/a/display.php?r=6521430"></script>
     <script data-cfasync="false" type="text/javascript" data-adel="atag" src="//ashcdn.com/script/atg.js" czid="hjmsvgagon"></script>
     <script data-cfasync="false" type="text/javascript" src="//buzzonclick.com/a/display.php?r=6521458"></script>
     <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script>
