@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="a.validate.02" content="tES2M1OGi7uuSro9DTID_AjFqX0h8bH-xUNb" />
       <meta name="monetag" content="d1baa147a249c246b0c984996f5695f7"></meta>
     {/* <script data-cfasync="false" type="text/javascript" src="//buzzonclick.com/a/display.php?r=6521458"></script> */}
-    {/* <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script> */}
+     <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script> 
     </Head>
         <Component {...pageProps} />
         <Navbar />
