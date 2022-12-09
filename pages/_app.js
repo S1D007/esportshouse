@@ -10,12 +10,12 @@ import Head from 'next/head'
 
 function MyApp({ Component, pageProps }) {
   const route = useRouter()
-  // useEffect(() => {
-  //   const signup = localStorage.getItem("signup")
-  //   if (!signup) {
-  //     route.push("/account/signup")
-  //   }
-  // },[])
+  useEffect(() => {
+    const signup = localStorage.getItem("signup")
+    if (!signup) {
+      route.push("/account/signup")
+    }
+  },[])
   return (
     // <Provider store={store}>
       <main>
