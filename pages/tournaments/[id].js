@@ -10,9 +10,12 @@ const Register = ({data}) => {
     const [det,setDet] = useState(false)
     console.log(data)
     const [name,setName] = useState("")
+    const [email,setEmail] = useState("")
     const [done,setDone] = useState(false)
     const [exist,setExist] = useState(false)
     useEffect(()=>{
+        const email = localStorage.getItem("email")
+        setEmail(email)
        const x =  localStorage.getItem(data.id)
        if(x){
         setExist(true)
@@ -92,7 +95,7 @@ const Register = ({data}) => {
                                             window.alert("enter name")
                                         }else{
                                             setDone(true)
-                                            const url = `https://esp-xecc.onrender.com/add-part?username=${name}&id=${data._id}`
+                                            const url = `https://esp-xecc.onrender.com/add-part?username=${name}&id=${data._id}&email={email}`
                                             axios.get(url).then(()=>{
                                                 alert("regestration Done")
                                                 localStorage.setItem(data.id,data.id)
@@ -115,7 +118,7 @@ const Register = ({data}) => {
                     marginTop:"-120px",
                     borderRadius:"10px"
                 }}>
-                    <h1>ID:{data.game_id}</h1>
+                    <h1>ID:{data.id_game}</h1>
                     <h1>Password: {data.password}</h1>
                     {!data.game_id?`Please wait till ${data.schd}`:""}
                 </div>:""
