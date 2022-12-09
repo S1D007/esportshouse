@@ -32,6 +32,7 @@ export default function Home({tournaments}) {
     {/* <Topfeatured /> */}
     <Topgames />
       <h1 className="text-3xl mx-2" >Recomemded Tournaments</h1>
+      <div id="awn-z6521462">
       <section className={style2.post_container}>
       {
         tournaments.map(({bannerImgUrl,mode,title,PrizePool,slot,id,id_game,schd,game,participiants},i)=>{
@@ -41,6 +42,7 @@ export default function Home({tournaments}) {
         })
       }
       </section>
+      </div>
       </section>
     </main>
         <Navbar/>
