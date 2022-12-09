@@ -34,9 +34,9 @@ export default function Home({tournaments}) {
       <h1 className="text-3xl mx-2" >Recomemded Tournaments</h1>
       <section className={style2.post_container}>
       {
-        tournaments.map(({bannerImgUrl,mode,title,PrizePool,slot,id,id_game,schd,game},i)=>{
+        tournaments.map(({bannerImgUrl,mode,title,PrizePool,slot,id,id_game,schd,game,participiants},i)=>{
           return <div key={i} >
-          <Post banner={bannerImgUrl} gameID={id_game} schd={schd} id={id} mode={mode} title={title} prize={PrizePool} slot={slot} game={game} />
+          <Post banner={bannerImgUrl} gameID={id_game} schd={schd} id={id} mode={mode} title={title} prize={PrizePool} slot={slot} game={game} participiants={participiants} />
           </div>
         })
       }

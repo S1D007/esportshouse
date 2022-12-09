@@ -4,7 +4,7 @@ import Image from "next/image"
 import {useRouter} from "next/router"
 import { Avatar, Chip } from '@mui/material'
 import ShareIcon from '@mui/icons-material/Share';
-const Post = ({title,slot,banner,prize,mode,id,schd,game}) => {
+const Post = ({title,slot,banner,prize,mode,id,schd,game,participiants}) => {
   const router = useRouter()
   return (
     <div class={style.card}>
@@ -29,14 +29,16 @@ const Post = ({title,slot,banner,prize,mode,id,schd,game}) => {
         <div><h1>Organiser:</h1><h1>Esports House India</h1> </div>
         <p>schedule : {schd}</p>
         <p>prize : <b>{prize}</b></p>
-        <p>slot : <b>{slot}</b></p>
+        <p>slot : <b>{participiants.length}/{slot}</b></p>
         <p>mode : <b>{mode}</b></p>
         <div className={style.buttons}>
-          <button 
+          <button style={{
+            color:"#000"
+          }}
            onClick={()=>{
             router.push(`/tournaments/${id}`)
             // alert("hi")
-           }}>register</button>
+           }}>View Tournament</button>
           <ShareIcon onClick={()=>{
              navigator.clipboard.writeText(`https://esportshouse.vercel.app/tournaments/${id}`).then(() => {
               // Alert the user that the action took place.

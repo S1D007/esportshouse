@@ -21,7 +21,7 @@ const Index = () => {
       </div>
       <div className={style.name_bio}>
       <h1>{name}</h1>
-      <p>I Love Esports House</p>
+      <p>Pro Gamerz</p>
       </div>
     </section>
     <section className={style.logout}>

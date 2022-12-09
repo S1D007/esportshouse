@@ -45,13 +45,13 @@ const Register = ({data}) => {
             <div className={style.promo_info}
             >
                 <br/>
-                <strong style={{
-                    marginTop:"-50px"
-                }} className="text-3xl" >{data.title}</strong>
+                <h1 style={{
+                    // marginTop:"-150px"
+                }} className="text-3xl mt-14" >{data.title}</h1>
                 {/* <p></p> */}
             </div>
             <button style={{
-                marginTop:"-40px"
+                // marginTop:"-10px"
             }} disabled={done}  onClick={()=>{
                 setDet(true)
             }} className={style.join_btn}>{done || exist ?"Registered":"Join Tournament"}</button>
@@ -64,16 +64,20 @@ const Register = ({data}) => {
                     justifyContent:"center",
                     padding:"10px",
                     // marginTop:"-120px",
-                    alignItems:"center"
+                    // alignItems:"center"
                 }} >
                     {
                                     exist?"":<div>
                                         <input value={name} onChange={(e)=>{setName(e.target.value)}} type="text"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="In Game Name"/>
                                     
                                     <button style={{
+                                        backgroundColor:"#15151a",
+                                        color:"#fff",
+                                        padding:"10px",
+                                        margin:"10px"
 
                                     }} onClick={()=>{
-                                        if(name === "" && name.langth < 3){
+                                        if(name === "" && name.length < 3){
                                             window.alert("enter name")
                                         }else{
                                             setDone(true)
@@ -97,11 +101,12 @@ const Register = ({data}) => {
                     padding:"20px",
                     margin:"10px",
                     fontSize:"20px",
-                    marginTop:"-150px",
+                    marginTop:"-120px",
                     borderRadius:"10px"
                 }}>
                     <h1>ID:{data.game_id}</h1>
                     <h1>Password: {data.password}</h1>
+                    {!data.game_id?`Please wait till ${data.schd}`:""}
                 </div>:""
             }
 
@@ -147,7 +152,6 @@ const Register = ({data}) => {
                     <p>${data.PrizePool / 4}</p>
                 </div> */}
             </section>
-            
 
     </main>
   )

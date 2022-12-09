@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/account/signup": [
+    "/tournaments/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/account/signup.js"
+      "static/chunks/pages/tournaments/[id].js"
     ]
   },
   "ampFirstPages": []

@@ -6,6 +6,8 @@ import { useRouter } from 'next/router'
 import Navbar from '../components/utils/Navbar'
 import Mobnav from '../components/utils/Mobnav'
 import NextNProgress from 'nextjs-progressbar';
+import Head from 'next/head'
+
 function MyApp({ Component, pageProps }) {
   const route = useRouter()
   useEffect(() => {
@@ -17,6 +19,9 @@ function MyApp({ Component, pageProps }) {
   return (
     // <Provider store={store}>
       <main>
+        <Head>
+      <meta name="monetag" content="d1baa147a249c246b0c984996f5695f7"></meta>
+    </Head>
       <Mobnav/>
       <NextNProgress/>
         <Component {...pageProps} />
