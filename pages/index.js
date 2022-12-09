@@ -33,6 +33,7 @@ export default function Home({tournaments}) {
     <Topgames />
       <h1 className="text-3xl mx-2" >Recomemded Tournaments</h1>
       <div id="awn-z6521462">
+      
       <section className={style2.post_container}>
       {
         tournaments.map(({bannerImgUrl,mode,title,PrizePool,slot,id,id_game,schd,game,participiants},i)=>{
