@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
     // <Provider store={store}>
       <main>
         <Head>
+        <meta name="a.validate.02" content="tES2M1OGi7uuSro9DTID_AjFqX0h8bH-xUNb" />
       <meta name="monetag" content="d1baa147a249c246b0c984996f5695f7"></meta>
     </Head>
       <Mobnav/>
