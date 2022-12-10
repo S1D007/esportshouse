@@ -123,7 +123,7 @@ const funcvalidation = () => {
                 localStorage.setItem("uid",e.data.uid)
                 localStorage.setItem("username",e.data.username)
                 localStorage.setItem("coins",e.data.balance)
-                localStorage.setItem("email",e.email)
+                localStorage.setItem("email",user.email)
                 console.log(e)
               route.push("/")
             })
