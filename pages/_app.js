@@ -28,6 +28,16 @@ function MyApp({ Component, pageProps }) {
      <script data-cfasync="false" src="//asacdn.com/script/ippg.js" data-adel="inpage" zid="6521470" rr="30" mads="2"></script> 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3222143527106963"
      crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3222143527106963"
+     crossorigin="anonymous"></script>
+<!-- Ads 1 side -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:300px;height:600px"
+     data-ad-client="ca-pub-3222143527106963"
+     data-ad-slot="7811813933"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     </Head>
         <Component {...pageProps} />
         <Navbar />
