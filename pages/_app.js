@@ -30,7 +30,6 @@ function MyApp({ Component, pageProps }) {
      crossorigin="anonymous"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3222143527106963"
      crossorigin="anonymous"></script>
-<!-- Ads 1 side -->
 <ins class="adsbygoogle"
      style="display:inline-block;width:300px;height:600px"
      data-ad-client="ca-pub-3222143527106963"
