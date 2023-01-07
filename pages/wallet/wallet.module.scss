@@ -75,7 +75,7 @@
     }
 }
 
-.balance{
+.balance{ 10 }
     @include  flex_box(row , space-between);
     font-weight: 500;
     padding: 0rem 1rem;
